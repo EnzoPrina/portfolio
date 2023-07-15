@@ -359,12 +359,14 @@ font-size: var(--big-font-size)
 }
 /*==================== BUTTONS ====================*/
 .button{
+  font-family: var(--body-font);
  display: inline-block; 
  background-color: var(--first-color);
  color: #fff;
  padding: 1rem;
  border-radius: .5rem;
  font-weight: var(--font-medium);
+ border: none;
 }
 
 .button:hover{
@@ -1281,3 +1283,6 @@ grid-template-columns: .5fr;
   }
 }
 
+#trucazo{
+  opacity: 0;
+}
