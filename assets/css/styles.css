@@ -805,6 +805,7 @@ margin-bottom: var(--mb-1);
 
 /* Button below the card */
 .portfolio__button {
+  font-family: var(--body-color);
   background-color: var(--first-color-alt);
   color: white;
   border: none;
@@ -866,6 +867,65 @@ margin-bottom: var(--mb-1);
   .portfolio__grid {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+}
+
+/*==================== MODAL STYLING ====================*/
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+  
+}
+
+.modal__content {
+  background-color: var(--first-color-second);
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal__close {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  float: right;
+  cursor: pointer;
+}
+
+.modal__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.modal__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Responsive: Tablets and Mobile */
+@media screen and (max-width: 768px) {
+  .modal__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .modal__grid {
+    grid-template-columns: 1fr;
   }
 }
 

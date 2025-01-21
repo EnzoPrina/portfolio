@@ -140,6 +140,27 @@ document.addEventListener('DOMContentLoaded', () => {
     filterButtons[0].click();
 });
 
+// Get modal elements
+const project5Button = document.querySelector('.project5__button');
+const project5Modal = document.getElementById('project5Modal');
+const modalClose = document.querySelector('.modal__close');
+
+// Open modal
+project5Button.addEventListener('click', () => {
+    project5Modal.style.display = 'block';
+});
+
+// Close modal when clicking the close button
+modalClose.addEventListener('click', () => {
+    project5Modal.style.display = 'none';
+});
+
+// Close modal when clicking outside the modal content
+window.addEventListener('click', (event) => {
+    if (event.target === project5Modal) {
+        project5Modal.style.display = 'none';
+    }
+});
 
   
 /*==================== TESTIMONIAL ====================*/
