@@ -309,7 +309,7 @@ img {
 }
 
 .home__blob-img{
-  width: 170px;
+  width: 220px;
 }
 
 .home__data{
@@ -408,7 +408,12 @@ font-size: var(--big-font-size)
   color: var(--first-color-alt);
 }
 /*==================== ABOUT ====================*/
-
+.quando__img{
+  width: 400px;
+  border-radius: .5rem;
+  justify-self: center;
+  align-items: center;
+}
 
 
 .about__img{
