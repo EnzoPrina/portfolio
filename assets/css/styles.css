@@ -743,10 +743,10 @@ margin-bottom: var(--mb-1);
 .portfolio__filters {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap; /* Permite que los botones se ajusten en múltiples filas si es necesario */
   gap: 1rem;
   margin-bottom: 2rem;
   font-family: var(--body-font);
-  
 }
 
 .portfolio__filter {
@@ -758,6 +758,7 @@ margin-bottom: var(--mb-1);
   cursor: pointer;
   transition: background-color 0.3s;
   font-family: var(--body-font);
+  font-size: 1rem; /* Tamaño base de fuente */
 }
 
 .portfolio__filter:hover,
@@ -766,6 +767,25 @@ margin-bottom: var(--mb-1);
   font-family: var(--body-font);
 }
 
+/*=== Media Queries para Tablets ===*/
+@media (max-width: 768px) {
+  .portfolio__filter {
+    font-size: 0.9rem; /* Ajusta el tamaño del texto */
+    padding: 0.5rem 1rem; /* Reduce el tamaño del botón */
+  }
+}
+
+/*=== Media Queries para Teléfonos ===*/
+@media (max-width: 480px) {
+  .portfolio__filters {
+    gap: 0.5rem; /* Reduce el espacio entre botones */
+  }
+
+  .portfolio__filter {
+    font-size: 0.8rem; /* Reduce aún más el tamaño del texto */
+    padding: 0.5rem 0.8rem; /* Ajusta el padding para pantallas pequeñas */
+  }
+}
 .portfolio__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
