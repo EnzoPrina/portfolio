@@ -108,6 +108,40 @@ let swiperPortfolio = new Swiper(".portfolio__container", {
   });
 
 
+
+// Portfolio Filter Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.portfolio__filter');
+    const portfolioItems = document.querySelectorAll('.portfolio__item');
+
+    filterButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) => btn.classList.remove('active'));
+
+            // Add active class to the clicked button
+            button.classList.add('active');
+
+            // Get the filter category
+            const filter = button.getAttribute('data-filter');
+
+            // Show/Hide portfolio items
+            portfolioItems.forEach((item) => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+        });
+    });
+
+    // Show all items by default
+    filterButtons[0].click();
+});
+
+
+  
 /*==================== TESTIMONIAL ====================*/
 
 let swiperTestimonial = new Swiper(".testimonial__container", {
