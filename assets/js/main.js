@@ -50,6 +50,30 @@ skillsHeader.forEach((eL) =>{
     eL.addEventListener('click', toggleSkills)
 })
 
+
+
+// Get modal elements for Project 6
+const project6Button = document.querySelector('.project6__button');
+const project6Modal = document.getElementById('project6Modal');
+
+// Open modal for Project 6
+project6Button.addEventListener('click', () => {
+    project6Modal.style.display = 'block';
+});
+
+// Close modal for Project 6
+project6Modal.querySelector('.modal__close').addEventListener('click', () => {
+    project6Modal.style.display = 'none';
+});
+
+// Close modal when clicking outside the modal content
+window.addEventListener('click', (event) => {
+    if (event.target === project6Modal) {
+        project6Modal.style.display = 'none';
+    }
+});
+
+
 /*==================== QUALIFICATION TABS ====================*/
 const tabs = document.querySelectorAll('[data-target]'),
     tabContents = document.querySelectorAll('[data-content]')
